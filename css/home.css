@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 레이아웃 */
+#wrap {width: 100%;}
+#contents {width: 100%; }
+
+/* 컨테이너 */
+.container {width: 100%; margin: 0 auto; height: inherit;}
+
+/* 레프트라이트 */
+#left {float: left;  width: 50%;}
+#right {float: left; width: 50%; }
+.right img {max-width: 100%; }
+
+/* 레프트 */
+.left {margin-top: 100px; padding-left: 5%; max-width: 100%;}
+.left h1 {font-size: 66px; font-weight: 600;}
+.left h2 {margin-top: 63px; margin-bottom: 50px; font-size: 55px; text-decoration: underline; line-height: 53px;}
+.left ul li {margin-top: 12px; font-size: 35px; padding-left: 20px;}
+.left .home {border: 3px solid ; border-radius: 30px; width: 120px;}
+.left .insp {border: 3px solid ; border-radius: 30px; width: 360px; }
+.left .design {border: 3px solid ; border-radius: 30px; width: 360px; }
+.left .flat {border: 3px solid ; border-radius: 30px; width: 135px;}
+
+.left .copy {font-size: 20px; margin-top: 120px;}
+
+/* 레프트 박스 */
+.left ul li a:hover {color: #fff; background-color: #222;}
+.left .home:hover {background-color: #222;}
+.left .insp:hover {background-color: #222;}
+.left .design:hover {background-color: #222;}
+.left .flat:hover {background-color: #222;}
+.left .resume:hover {background-color: #222;}
+
+@media(max-width: 900px) {
+    #wrap {width: 100%;}
+    #left {width: 100%; padding-right: 30px;}
+    .left h1 { 
+        font-size: 50px;
+    }
+    .left h2 {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 50px;
+        margin-top: 0px;
+    }
+    
+    .left ul li {margin-top: 12px; font-size: 25px; padding-left: 20px;}
+    .left .home {border: 3px solid ; border-radius: 30px; width: 90px;}
+    .left .insp {border: 3px solid ; border-radius: 30px; width: 270px; }
+    .left .design {border: 3px solid ; border-radius: 30px; width: 270px; }
+    .left .flat {border: 3px solid ; border-radius: 30px; width: 100px;}
+    
+    .left .copy {font-size: 10px; margin-top: 120px; margin-bottom: 20px;}
+    
+    
+    .right {display: none;}
+    
+}

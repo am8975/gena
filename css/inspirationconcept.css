@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 레이아웃 */
+#wrap {width: 100%;}
+#header {width: 100%; height: 100px; }
+#contents {width: 100%; height: 100%;}
+#footer {width: 100%; height: 100px;}
+
+
+
+/* 컨테이너 */
+.container {width: 100%; margin: 0 auto; height: inherit;}
+
+/* 헤더 메뉴 */
+input[id="menuicon"] { display: none; }
+input[id="menuicon"] + label {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+input[id="menuicon"] + label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 20px;
+    background: #000;
+    transition: all .35s;
+}
+input[id="menuicon"] + label span:nth-child(1) {
+    top: 0;
+}
+input[id="menuicon"] + label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+input[id="menuicon"] + label span:nth-child(3) {
+    bottom: 0;
+}
+input[id="menuicon"] + label {z-index: 2;}
+input[id="menuicon"]:checked +label span:nth-child(1) {
+    top: 50%;
+    transform:translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked +label span:nth-child(2) {
+    opacity: 0;
+}
+input[id="menuicon"]:checked +label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+/* 사이드 바 */
+div[class="sidebar"] {
+    width: 398px;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: -398px;
+    z-index: 1;
+    transition: all .35s;
+}
+input[id="menuicon"]:checked + label + div[class="sidebar"] {
+    left:0;
+}
+
+.sidebar {padding-top: 120px;}
+.sidebar .sidebar_menu {font-size: 20px; padding-top: 70px; padding-left: 50px;}
+.sidebar .sidebar_menu .sidebar_1 {margin-bottom: 50px;}
+.sidebar .sidebar_menu .sidebar_2 {margin-bottom: 50px;}
+.sidebar .sidebar_menu .sidebar_3 {margin-bottom: 50px;}
+.sidebar .sidebar_menu .sidebar_4 {margin-bottom: 50px;}
+.sidebar .sidebar_menu .sidebar_5 {margin-bottom: 50px;}
+
+.header .header_menu {position: absolute; top: 45px; left: 0; padding-left: 30px;}
+
+/* 컨텐츠 */
+.contents {overflow: hidden;}
+.contents .con1 {width: 39.395833%; padding-left: 2%; float: left;}
+.contents .con1 .con1_1 h1 {font-size: 100px; line-height: 100px;}
+.contents .con1 .con1_2 {font-size: 11px; line-height: 16px; padding-top: 500px;}
+.contents .con2 {width: 41.145833%; height: 100%; float: left; padding-right: 2%;}
+.contents .con2 img {max-width: 100%; height: 660px;}
+.contents .con3 {width: 13.33%;  float: left; padding-left: 2%;}
+.contents .con3 .con3_1 {transform: rotate(90deg); padding-top: 20px; padding-left: 20px;}
+.contents .con3 .con3_1 .con3_1_1 {font-size: 17px; font-weight: 550; line-height: 14px; padding-bottom: 10px;}
+.contents .con3 .con3_1 .con3_1_2 {font-size: 10px; line-height: 12px;}
+.contents .con3 .con3_1 .con3_1_3 {font-size: 10px; line-height: 12px; padding-top: 10px;}
+.contents .con3 .con3_2 {font-size: 11px; padding-top: 515px; padding-left: 37px;}
+
+/* 푸터 */
+.footer { text-align: center; font-size: 10px; padding-top: 70px}
+
+/* 갤러리 */
+.contents .con2 {padding: 1%;}
+.contents .con2 .slick-slide {margin: 0px;}
+.contents .con2 .slick-dots {position: absolute; display: block; width: 85%; text-align: center; padding-top: 20px;}
+.contents .con2 .slick-dots li {display: inline-block; width: 15px; height: 15px; margin: 5px;}
+.contents .con2 .slick-dots li button {font-size: 0; line-height: 0; display: block; width: 10px; height: 10px; cursor: pointer; background: #707070; border-radius: 50%;}
+.contents .con2 .slick-dots li.slick-active button {background: #444343;}
+
+
+
+@media(max-width: 900px) {
+    
+
+
+/* 레이아웃 */
+#wrap {width: 100%;}
+#header {width: 100%; height: 100px; }
+#contents {width: 100%; height: 100%;}
+#footer {width: 100%; height: 100px;}
+
+
+
+/* 컨테이너 */
+.container {width: 100%; margin: 0 auto; height: inherit;}
+
+/* 헤더 메뉴 */
+input[id="menuicon"] { display: none; }
+input[id="menuicon"] + label {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+input[id="menuicon"] + label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 20px;
+    background: #000;
+    transition: all .35s;
+}
+input[id="menuicon"] + label span:nth-child(1) {
+    top: 0;
+}
+input[id="menuicon"] + label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+input[id="menuicon"] + label span:nth-child(3) {
+    bottom: 0;
+}
+input[id="menuicon"] + label {z-index: 2;}
+input[id="menuicon"]:checked +label span:nth-child(1) {
+    top: 50%;
+    transform:translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked +label span:nth-child(2) {
+    opacity: 0;
+}
+input[id="menuicon"]:checked +label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+/* 사이드 바 */
+div[class="sidebar"] {
+    width: 398px;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: -398px;
+    z-index: 1;
+    transition: all .35s;
+}
+input[id="menuicon"]:checked + label + div[class="sidebar"] {
+    left:0;
+}
+
+.sidebar {padding-top: 120px;}
+.sidebar .sidebar_menu {font-size: 20px; padding-top: 70px; padding-left: 50px;}
+.sidebar .sidebar_menu .sidebar_1 {margin-bottom: 50px;}
+.sidebar .sidebar_menu .sidebar_2 {margin-bottom: 50px;}
+.sidebar .sidebar_menu .sidebar_3 {margin-bottom: 50px;}
+.sidebar .sidebar_menu .sidebar_4 {margin-bottom: 50px;}
+.sidebar .sidebar_menu .sidebar_5 {margin-bottom: 50px;}
+
+.header .header_menu {position: absolute; top: 45px; left: 0; padding-left: 30px;}
+
+/* 컨텐츠 */
+.contents {display: flex;}
+.contents .con1 {width: 100%;}
+.contents .con1 .con1_1 h1 {font-size: 30px; line-height: 30px; }
+.contents .con1 .con1_2 {font-size: 11px; line-height: 12px; padding-top: 480px; font-weight: 500;}
+.contents .con2 {width: 100%;  }
+.contents .con2 img {max-width: 150%; max-height: 100%;}
+.contents .con3 {display: none;}
+
+
+/* 푸터 */
+.footer { text-align: center; font-size: 10px; padding-top: 30px}
+
+/* 갤러리 */
+.contents .con2 {padding: 1%;}
+.contents .con2 .slick-slide {margin: 0px;}
+.contents .con2 .slick-dots {position: absolute; display: block; width: 85%; text-align: center; padding-top: 20px;}
+.contents .con2 .slick-dots li {display: inline-block; width: 15px; height: 15px; margin: 5px;}
+.contents .con2 .slick-dots li button {font-size: 0; line-height: 0; display: block; width: 10px; height: 10px; cursor: pointer; background: #707070; border-radius: 50%;}
+.contents .con2 .slick-dots li.slick-active button {background: #444343;}
+   
+}
+
+
+
